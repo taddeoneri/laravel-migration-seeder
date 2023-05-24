@@ -18,19 +18,17 @@ class TrainsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
        for ($i = 0; $i < 50; $i++) {
-            $newHouse = new Train();
-            $newHouse->company = $faker->words(5, true);
-            $newHouse->departure_station = $faker->address();
-            $newHouse->arrival_station = $faker->postcode();
-            $newHouse->city = $faker->city();
-            $newHouse->state = $faker->state();
-            $newHouse->square_meters = $faker->numberBetween(40, 500);
-            $newHouse->rooms = $faker->randomDigitNotNull();
-            $newHouse->bathrooms = $faker->randomDigitNotNull();
-            $newHouse->garage = $faker->randomDigitNotNull();
-            $newHouse->price = $faker->randomFloat(1, 20000, 300000);
-            $newHouse->description = $faker->paragraph();
-            $newHouse->save();
+            $newTrain = new Train();
+            $newTrain->company = $faker->words(5, true);
+            $newTrain->departure_station = $faker->address();
+            $newTrain->arrival_station = $faker->postcode();
+            $newTrain->departure_time = $faker->city();
+            $newTrain->arrival_time = $faker->state();
+            $newTrain->train_code = $faker->numberBetween(40, 500);
+            $newTrain->carriages = $faker->randomDigitNotNull();
+            $newTrain->delay = $faker->randomDigitNotNull();
+            $newTrain->deleted = $faker->randomDigitNotNull();
+            $newTrain->save();
         }
     }
 }
