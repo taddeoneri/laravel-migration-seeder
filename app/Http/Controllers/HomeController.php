@@ -10,6 +10,6 @@ class HomeController extends Controller
     public function index()
     {
         $trains = Train::all();
-        return view('Homepage', compact('trains'));
+        return view('homepage', compact('trains'));
     }
 }
