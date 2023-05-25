@@ -4,6 +4,7 @@
 @section('maincontent')
     <main>
         <h1 class="text-center">Lista treni</h1>
+
         @foreach ($trains as $train)
         <ul>
             <li>{{ $train->company }}</li>
@@ -17,5 +18,6 @@
             <li>{{ $train->delated }}</li>
         </ul>
         @endforeach
+
     </main>
 @endsection
